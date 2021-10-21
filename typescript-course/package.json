@@ -5,13 +5,23 @@
   "main": "index.js",
   "scripts": {
     "build": "tsc",
-    "dev": "ts-node-dev --respawn --clear --quiet ./src/main.ts"
+    "dev": "ts-node-dev --respawn --clear --quiet ./src/main.ts",
+    "dev:utils": "ts-node-dev -r tsconfig-paths/register --respawn --clear --quiet ./src/utils/main.ts",
+    "dev:decorators": "ts-node-dev -r tsconfig-paths/register --respawn --clear --quiet ./src/decorators/main.ts"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "@types/node": "^16.11.2",
+    "@types/simplebar": "^5.3.3",
     "ts-node-dev": "^1.1.8",
+    "tsconfig-paths": "^3.11.0",
     "typescript": "^4.4.4"
+  },
+  "dependencies": {
+    "axios": "^0.23.0",
+    "onscreen": "^1.4.0",
+    "simplebar": "^5.3.6"
   }
 }
