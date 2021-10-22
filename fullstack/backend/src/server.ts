@@ -1,8 +1,10 @@
-import express, { response } from 'express'
+import express from 'express'
+import cors from 'cors'
 import { v4 as uuid } from 'uuid'
 
 const app = express()
 app.use(express.json())
+app.use(cors({ origin: '*' }))
 
 interface User {
   id: string
